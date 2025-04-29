@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Mentorship Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mentorship Matching Platform</h1>
+        <nav>
+            <a href="profile.html">My Profile</a>
+            <a href="discovery.html">Find Matches</a>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-section">
+            <h2>My Profile</h2>
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="role">I am a:</label>
+                    <select id="role" required>
+                        <option value="">Select role</option>
+                        <option value="mentor">Mentor</option>
+                        <option value="mentee">Mentee</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skills">Skills/Expertise</label>
+                    <div class="tags-input">
+                        <input type="text" id="skills-input" placeholder="Add skills">
+                        <div id="skills-tags" class="tags-container"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">Interests (for mentees)</label>
+                    <div class="tags-input">
+                        <input type="text" id="interests-input" placeholder="Add interests">
+                        <div id="interests-tags" class="tags-container"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" rows="5" placeholder="Tell others about yourself..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Save Profile</button>
+                <div id="profile-message" class="message"></div>
+            </form>
+        </section>
+    </main>
+    <script src="js/profile.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

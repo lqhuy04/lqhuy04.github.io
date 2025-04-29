@@ -1,7 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Mentorship Matching Platform</h1>
+        <nav>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <div id="user-nav" style="display: none;">
+                <a href="profile.html">My Profile</a>
+                <a href="discovery.html">Find Matches</a>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Connect with mentors and mentees</h2>
+            <p>Grow your skills through meaningful mentorship relationships</p>
+            <div class="cta-buttons">
+                <a href="register.html" class="btn">Get Started</a>
+                <a href="login.html" class="btn secondary">Login</a>
+            </div>
+        </section>
+    </main>
+    <script src="js/auth.js"></script>
 </body>
-</html>
+</html> 
