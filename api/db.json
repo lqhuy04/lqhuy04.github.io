@@ -1,0 +1,40 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com",
+            "password": "password123"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane@example.com",
+            "password": "password123"
+        }
+    ],
+    "profiles": [
+        {
+            "userId": 1,
+            "role": "mentor",
+            "skills": ["JavaScript", "HTML", "CSS"],
+            "interests": [],
+            "bio": "Frontend developer with 5 years of experience"
+        },
+        {
+            "userId": 2,
+            "role": "mentee",
+            "skills": [],
+            "interests": ["Web Development", "UI/UX"],
+            "bio": "Aspiring web developer looking for guidance"
+        }
+    ],
+    "connections": [
+        {
+            "id": 1,
+            "mentorId": 1,
+            "menteeId": 2,
+            "status": "pending"
+        }
+    ]
+}
