@@ -3,6 +3,30 @@ let connections = JSON.parse(localStorage.getItem('connections')) || [
     { id: 1, mentorId: 1, menteeId: 2, status: 'pending' }
 ];
 
+// Mock users data
+let users = JSON.parse(localStorage.getItem('users')) || [
+    { id: 1, name: "John Doe", email: "john@example.com", password: "password123" },
+    { id: 2, name: "Jane Smith", email: "jane@example.com", password: "password123" }
+];
+
+// Mock profiles data
+let profiles = JSON.parse(localStorage.getItem('profiles')) || [
+    { 
+        userId: 1, 
+        role: 'mentor', 
+        skills: ['JavaScript', 'HTML', 'CSS'], 
+        interests: [], 
+        bio: 'Frontend developer with 5 years of experience' 
+    },
+    { 
+        userId: 2, 
+        role: 'mentee', 
+        skills: [], 
+        interests: ['Web Development', 'UI/UX'], 
+        bio: 'Aspiring web developer looking for guidance' 
+    }
+];
+
 // DOM Elements
 const usersList = document.getElementById('users-list');
 const filterRole = document.getElementById('filter-role');
