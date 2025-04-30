@@ -10,7 +10,7 @@ let profiles = JSON.parse(localStorage.getItem('profiles')) || [
     { 
         userId: 2, 
         role: 'mentee', 
-        skills: [], 
+        skills: ['JavaScript', 'HTML', 'CSS'], 
         interests: ['Web Development', 'UI/UX'], 
         bio: 'Aspiring web developer looking for guidance' 
     }
