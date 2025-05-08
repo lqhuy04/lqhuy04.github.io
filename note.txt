@@ -1,0 +1,39 @@
+const myPromise = new Promise((resolve, reject)) => {
+    const success = true;
+
+    if(success) {
+        resolve("Promise resolved!");
+    }
+    else{
+        reject("Promise rejected!");
+    }
+
+
+}
+
+const promises = [
+    {id: 1, name: "Alice"},
+    {id: 2, name: "Bob"},
+]
+
+promises.forEach(promise => {
+    console.log(promise.name);
+})
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+setTimeout(function, delay);
+
+const promise1=
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    })
+
+fail

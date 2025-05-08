@@ -2,6 +2,7 @@
 let users = JSON.parse(localStorage.getItem('users')) || [
     { id: 1, name: "John Doe", email: "john@example.com", password: "password123" },
     { id: 2, name: "Jane Smith", email: "jane@example.com", password: "password123" }
+
 ];
 
 let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
@@ -14,10 +15,17 @@ const registerLink = document.getElementById('register-link');
 const userNav = document.getElementById('user-nav');
 
 function initAuthUI() {
+
+
     if (currentUser) {
         if (loginLink) loginLink.style.display = 'none';
         if (registerLink) registerLink.style.display = 'none';
-        if (userNav) userNav.style.display = 'block';
+        if (userNav) {
+            userNav.style.display = 'block';
+            const profileLink = userNav.querySelector('a[href="profile.html"]');
+            profileLink.textContent = `Welcome, ${currentUser.name}`;
+            window.location.href = 'profile.html';
+        }
     } else {
         if (loginLink) loginLink.style.display = 'block';
         if (registerLink) registerLink.style.display = 'block';
@@ -99,6 +107,13 @@ if (registerForm) {
 
 if (logoutBtn) {
     logoutBtn.addEventListener('click', logout);
-}
+};
+
+window.addEventListener('storage', function(e) {
+    if (e.key === 'currentUser') {
+        currentUser = JSON.parge(localStorage.getItem('currentUser')) || null;
+        initAuthUI();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', initAuthUI);
